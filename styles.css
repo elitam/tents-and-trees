@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#resetButton {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 50px; /* Adjust the value to change the roundness */
+    left: calc(50% + 50px);
+    background-color: #CCCCCC; /* Gray background */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth color change */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-left: 50px; /* So the button looks centered to the grid and not the whole board */
+}
+
+#resetButton:hover {
+    background-color: #AAAAAA; /* Darker gray on hover */
+      
+}
+
+.boardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%; 
+}
+
+/* Styles for the row and column counts */
+.rowCounts,
+.colCounts {
+  display: flex;
+  justify-content: right;
+  width: 90%;
+  
+}
+
+.rowCount,
+.colCount {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: verdana;
+  margin: 3px;
+  cursor: pointer;
+  color:dimgrey;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the game board grid */
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 50px; /* Adjust the cell width */
+  height: 50px; /* Adjust the cell height */
+  margin: 3px;
+  background-color: lightgrey;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the tree and tent cells */
+.tree {
+  background-image: url("tree.svg");
+}
+
+.tent {
+  background-image: url("tent.svg"); 
+}
+
+.grass {
+  background-color: #9CC032;
+  transition: background-color 0.3s ease;
+}
+
+/* Apply the animation to the cells when the win condition is met */
+.rainbow-animation {
+    animation: rainbow 5s linear infinite;
+}
+
+/* Keyframe animation for rainbow colors */
+@keyframes rainbow {
+    0% { background-color: red; }
+    20% { background-color: orange; }
+    40% { background-color: yellow; }
+    60% { background-color: green; }
+    80% { background-color: blue; }
+    100% { background-color: purple; }
+}
+
+
+
